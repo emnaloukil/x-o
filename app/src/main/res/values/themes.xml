@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Thème principal -->
+    <style name="Theme.XOTournament" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryDark">@color/color_primary_dark</item>
+        <item name="colorAccent">@color/color_accent</item>
+        <item name="android:windowBackground">@color/color_background</item>
+        <item name="android:statusBarColor">@color/color_primary_dark</item>
+        <item name="android:navigationBarColor">@color/color_primary_dark</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <!-- Texte titre principal -->
+    <style name="TextStyle.Title" parent="">
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:textColor">@color/color_text_primary</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+
+    <!-- Texte sous-titre -->
+    <style name="TextStyle.Subtitle" parent="">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/color_text_secondary</item>
+        <item name="android:letterSpacing">0.04</item>
+    </style>
+
+    <!-- Texte section -->
+    <style name="TextStyle.SectionTitle" parent="">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/color_text_secondary</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.08</item>
+    </style>
+
+    <!-- Bouton principal -->
+    <style name="ButtonStyle.Primary" parent="Widget.MaterialComponents.Button">
+        <item name="android:background">@drawable/button_primary</item>
+        <item name="android:textColor">@color/color_text_on_primary</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:paddingTop">14dp</item>
+        <item name="android:paddingBottom">14dp</item>
+        <item name="android:paddingStart">28dp</item>
+        <item name="android:paddingEnd">28dp</item>
+        <item name="android:minHeight">52dp</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:letterSpacing">0.03</item>
+    </style>
+
+    <!-- Bouton secondaire -->
+    <style name="ButtonStyle.Secondary" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:background">@drawable/button_secondary</item>
+        <item name="android:textColor">@color/color_primary</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <!-- Case X-O -->
+    <style name="CellStyle" parent="">
+        <item name="android:background">@drawable/cell_background</item>
+        <item name="android:textSize">36sp</item>
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:gravity">center</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <!-- Score Card -->
+    <style name="ScoreCardStyle" parent="">
+        <item name="android:background">@drawable/score_card_background</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!-- Texte score chiffre -->
+    <style name="TextStyle.ScoreNumber" parent="">
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:textSize">34sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!-- Texte score label -->
+    <style name="TextStyle.ScoreLabel" parent="">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+</resources>

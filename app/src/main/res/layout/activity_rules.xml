@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    activity_rules.xml
+    Emplacement : app/src/main/res/layout/activity_rules.xml
+    Écran Principe du jeu
+-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_main">
+
+    <!-- EN-TÊTE -->
+    <LinearLayout
+        android:id="@+id/layout_rules_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp" android:paddingEnd="16dp"
+        android:paddingTop="16dp" android:paddingBottom="12dp">
+
+        <Button
+            android:id="@+id/btn_rules_back"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="@string/rules_btn_back"
+            android:textSize="13sp"
+            android:textColor="@color/color_primary"
+            android:background="@drawable/button_secondary"
+            android:paddingStart="14dp" android:paddingEnd="14dp"
+            android:stateListAnimator="@null" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/rules_title"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/color_text_primary"
+            android:gravity="center" />
+
+        <!-- Spacer symétrique -->
+        <View android:layout_width="80dp" android:layout_height="1dp" />
+    </LinearLayout>
+
+    <!-- CONTENU SCROLLABLE -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="24dp"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- ──────────────────────────── -->
+            <!-- Section 1 : Règles XO       -->
+            <!-- ──────────────────────────── -->
+            <LinearLayout
+                android:id="@+id/panel_rules_xo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/panel_background"
+                android:padding="18dp"
+                android:layout_marginBottom="14dp">
+
+                <TextView
+                    android:id="@+id/tv_rules_xo_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rules_xo_title"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/color_text_primary"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:id="@+id/tv_rules_xo_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rules_xo_text"
+                    android:textSize="14sp"
+                    android:textColor="@color/color_text_secondary"
+                    android:lineSpacingMultiplier="1.5" />
+
+            </LinearLayout>
+
+            <!-- ──────────────────────────── -->
+            <!-- Section 2 : Tournoi         -->
+            <!-- ──────────────────────────── -->
+            <LinearLayout
+                android:id="@+id/panel_rules_tournament"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/panel_background"
+                android:padding="18dp"
+                android:layout_marginBottom="14dp">
+
+                <TextView
+                    android:id="@+id/tv_rules_tournament_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rules_tournament_title"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/color_text_primary"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:id="@+id/tv_rules_tournament_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rules_tournament_text"
+                    android:textSize="14sp"
+                    android:textColor="@color/color_text_secondary"
+                    android:lineSpacingMultiplier="1.5" />
+
+            </LinearLayout>
+
+            <!-- ──────────────────────────────── -->
+            <!-- Section 3 : Commande vocale      -->
+            <!-- ──────────────────────────────── -->
+            <LinearLayout
+                android:id="@+id/panel_rules_voice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/panel_background"
+                android:padding="18dp"
+                android:layout_marginBottom="14dp">
+
+                <TextView
+                    android:id="@+id/tv_rules_voice_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rules_voice_title"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/color_text_primary"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:id="@+id/tv_rules_voice_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rules_voice_text"
+                    android:textSize="14sp"
+                    android:textColor="@color/color_text_secondary"
+                    android:lineSpacingMultiplier="1.5"
+                    android:layout_marginBottom="14dp" />
+
+                <!-- Diagramme cases numérotées -->
+                <TextView
+                    android:id="@+id/tv_rules_grid_diagram"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rules_grid_diagram"
+                    android:textSize="18sp"
+                    android:fontFamily="monospace"
+                    android:textColor="@color/color_primary"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:padding="12dp"
+                    android:background="@drawable/cell_background"
+                    android:lineSpacingMultiplier="1.6" />
+
+                <Button
+                    android:id="@+id/btn_result_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="@string/result_btn_home"
+                    android:textSize="15sp"
+                    android:textColor="@color/color_primary"
+                    android:background="@drawable/button_secondary"
+                    android:stateListAnimator="@null" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

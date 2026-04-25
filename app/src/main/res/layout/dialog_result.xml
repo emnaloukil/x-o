@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+dialog_result.xml
+Emplacement : app/src/main/res/layout/dialog_result.xml
+Dialog affiché après chaque partie (victoire ou nul)
+
+Utilisation en Java :
+Dialog dialog = new Dialog(this);
+        dialog.setContentView(R.layout.dialog_result);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT,
+                                     ViewGroup.LayoutParams.WRAP_CONTENT);
+        dialog.setCancelable(false);
+        dialog.show();
+-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/panel_background"
+    android:padding="28dp"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp">
+
+    <!-- Icône résultat -->
+    <TextView
+        android:id="@+id/tv_dialog_result_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🎉"
+        android:textSize="52sp"
+        android:gravity="center"
+        android:layout_marginBottom="10dp" />
+
+    <!-- Message résultat -->
+    <TextView
+        android:id="@+id/tv_dialog_result_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Joueur X remporte la partie !"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/color_text_primary"
+        android:gravity="center"
+        android:layout_marginBottom="6dp" />
+
+    <!-- Sous-titre (ex: score actuel) -->
+    <TextView
+        android:id="@+id/tv_dialog_result_sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Partie 1 / 5 terminée"
+        android:textSize="13sp"
+        android:textColor="@color/color_text_secondary"
+        android:gravity="center"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Séparateur -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/divider_horizontal"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Bouton partie suivante -->
+    <Button
+        android:id="@+id/btn_dialog_next"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Partie suivante ▶"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/color_text_on_primary"
+        android:background="@drawable/button_primary"
+        android:stateListAnimator="@null"
+        android:layout_marginBottom="10dp" />
+
+    <!-- Bouton quitter -->
+    <Button
+        android:id="@+id/btn_dialog_quit"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:text="Quitter le tournoi"
+        android:textSize="14sp"
+        android:textColor="@color/color_text_secondary"
+        android:background="@drawable/button_secondary"
+        android:stateListAnimator="@null" />
+
+</LinearLayout>

@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    activity_home.xml
+    Emplacement : app/src/main/res/layout/activity_home.xml
+    Écran d'accueil du jeu X-O Tournament
+-->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_main"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="48dp"
+        android:paddingBottom="32dp">
+
+        <!-- ══════════════════════════════════════════ -->
+        <!-- EN-TÊTE : titre + sous-titre              -->
+        <!-- ══════════════════════════════════════════ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginBottom="28dp">
+
+            <!-- Icône décorative -->
+            <TextView
+                android:id="@+id/tv_home_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⭕❌"
+                android:textSize="48sp"
+                android:gravity="center"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Titre principal -->
+            <TextView
+                android:id="@+id/tv_home_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home_title"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                android:textColor="@color/color_text_primary"
+                android:gravity="center"
+                android:letterSpacing="0.02" />
+
+
+
+        </LinearLayout>
+
+        <!-- ══════════════════════════════════════════ -->
+        <!-- PANNEAU CONFIGURATION                     -->
+        <!-- ══════════════════════════════════════════ -->
+        <LinearLayout
+            android:id="@+id/panel_config"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/panel_background"
+            android:padding="20dp"
+            android:layout_marginBottom="16dp">
+
+            <!-- Choix du symbole -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/home_choose_symbol"
+                android:textSize="12sp"
+                android:textAllCaps="true"
+                android:letterSpacing="0.08"
+                android:textColor="@color/color_text_secondary"
+                android:layout_marginBottom="10dp" />
+
+            <RadioGroup
+                android:id="@+id/rg_symbol"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="18dp">
+
+                <!-- Bouton X -->
+                <LinearLayout
+                    android:id="@+id/ll_radio_x"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginEnd="6dp"
+                    android:background="@drawable/cell_background"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <RadioButton
+                        android:id="@+id/rb_symbol_x"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/home_symbol_x"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/color_player_x"
+                        android:buttonTint="@color/color_player_x"
+                        android:checked="true" />
+                </LinearLayout>
+
+                <!-- Bouton O -->
+                <LinearLayout
+                    android:id="@+id/ll_radio_o"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginStart="6dp"
+                    android:background="@drawable/cell_background"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <RadioButton
+                        android:id="@+id/rb_symbol_o"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/home_symbol_o"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/color_player_o"
+                        android:buttonTint="@color/color_player_o" />
+                </LinearLayout>
+
+            </RadioGroup>
+
+            <!-- Séparateur -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/divider_horizontal"
+                android:layout_marginBottom="18dp" />
+
+            <!-- Nombre de parties -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/home_choose_rounds"
+                android:textSize="12sp"
+                android:textAllCaps="true"
+                android:letterSpacing="0.08"
+                android:textColor="@color/color_text_secondary"
+                android:layout_marginBottom="10dp" />
+
+            <Spinner
+                android:id="@+id/spinner_rounds"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@drawable/spinner_background"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:textSize="15sp"
+                android:layout_marginBottom="18dp"
+                android:entries="@array/rounds_options" />
+
+            <!-- Séparateur -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/divider_horizontal"
+                android:layout_marginBottom="18dp" />
+
+            <!-- Mode de jeu -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/home_mode_label"
+                android:textSize="12sp"
+                android:textAllCaps="true"
+                android:letterSpacing="0.08"
+                android:textColor="@color/color_text_secondary"
+                android:layout_marginBottom="10dp" />
+
+            <RadioGroup
+                android:id="@+id/rg_game_mode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rb_mode_local"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="@string/home_mode_local"
+                    android:textSize="14sp"
+                    android:textColor="@color/color_text_primary"
+                    android:buttonTint="@color/color_primary"
+                    android:checked="true"
+                    android:gravity="center_vertical" />
+
+                <RadioButton
+                    android:id="@+id/rb_mode_online"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="@string/home_mode_online"
+                    android:textSize="14sp"
+                    android:textColor="@color/color_text_primary"
+                    android:buttonTint="@color/color_primary"
+                    android:gravity="center_vertical" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <!-- ══════════════════════════════════════════ -->
+        <!-- BOUTONS PRINCIPAUX                        -->
+        <!-- ══════════════════════════════════════════ -->
+
+        <!-- Bouton Jouer -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_play"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="@string/home_btn_play"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/button_primary"
+            android:layout_marginBottom="12dp"
+            android:gravity="center"
+            android:stateListAnimator="@null" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_rules"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="@string/home_btn_rules"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/color_primary"
+            android:background="@drawable/button_secondary"
+            android:layout_marginBottom="12dp"
+            android:gravity="center"
+            android:stateListAnimator="@null" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_last_score"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="@string/home_btn_last_score"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/color_primary"
+            android:background="@drawable/button_secondary"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:stateListAnimator="@null" />
+
+        <!-- ══════════════════════════════════════════ -->
+        <!-- INFO MODE VOCAL                           -->
+        <!-- ══════════════════════════════════════════ -->
+        <LinearLayout
+            android:id="@+id/panel_voice_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/panel_background"
+            android:padding="14dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/home_voice_info"
+                android:textSize="13sp"
+                android:textColor="@color/color_text_secondary"
+                android:lineSpacingMultiplier="1.3" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

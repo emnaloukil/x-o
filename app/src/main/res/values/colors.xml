@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Couleurs primaires -->
+    <color name="color_primary">#3D5AFE</color>         <!-- Indigo vif -->
+    <color name="color_primary_dark">#0031CA</color>    <!-- Indigo foncé -->
+    <color name="color_primary_light">#8187FF</color>   <!-- Indigo clair -->
+
+    <!-- Couleurs secondaires -->
+    <color name="color_accent">#FFD600</color>          <!-- Jaune doré -->
+    <color name="color_accent_dark">#C7A500</color>
+
+    <!-- Joueur X -->
+    <color name="color_player_x">#FF5252</color>        <!-- Rouge vif -->
+    <color name="color_player_x_light">#FF867F</color>
+    <color name="color_player_x_bg">#FFF0F0</color>
+
+    <!-- Joueur O -->
+    <color name="color_player_o">#00BCD4</color>        <!-- Cyan -->
+    <color name="color_player_o_light">#62EFFF</color>
+    <color name="color_player_o_bg">#F0FAFF</color>
+
+    <!-- Parties nulles -->
+    <color name="color_draw">#9E9E9E</color>
+    <color name="color_draw_bg">#F5F5F5</color>
+
+    <!-- Arrière-plans -->
+    <color name="color_background">#F0F2FF</color>      <!-- Bleu très clair -->
+    <color name="color_surface">#FFFFFF</color>
+    <color name="color_panel">#FFFFFF</color>
+
+    <!-- Textes -->
+    <color name="color_text_primary">#1A1A2E</color>    <!-- Bleu nuit -->
+    <color name="color_text_secondary">#5C6078</color>
+    <color name="color_text_hint">#9EA3B8</color>
+    <color name="color_text_on_primary">#FFFFFF</color>
+
+    <!-- Grille -->
+    <color name="color_cell_bg">#FFFFFF</color>
+    <color name="color_cell_border">#D0D5F0</color>
+    <color name="color_cell_pressed">#E8ECFF</color>
+    <color name="color_grid_line">#C5CAE9</color>
+
+    <!-- Bouton micro -->
+    <color name="color_mic_bg">#3D5AFE</color>
+    <color name="color_mic_bg_active">#FF5252</color>
+    <color name="color_mic_ripple">#8187FF</color>
+
+    <!-- Ombres & séparateurs -->
+    <color name="color_shadow">#1A000000</color>
+    <color name="color_divider">#E8ECFF</color>
+
+    <!-- Statut -->
+    <color name="color_success">#4CAF50</color>
+    <color name="color_warning">#FF9800</color>
+
+    <!-- Gradient start / end pour background -->
+    <color name="gradient_start">#E8ECFF</color>
+    <color name="gradient_end">#F5F0FF</color>
+</resources>

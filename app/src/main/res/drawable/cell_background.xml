@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Case X-O : fond blanc avec bordure bleue douce, bien arrondie -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Pressée -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/color_cell_pressed" />
+            <stroke
+                android:width="2dp"
+                android:color="@color/color_primary" />
+            <corners android:radius="12dp" />
+        </shape>
+    </item>
+
+    <!-- Normale -->
+    <item>
+        <layer-list>
+            <!-- Ombre légère -->
+            <item android:top="2dp" android:left="1dp" android:right="1dp">
+                <shape android:shape="rectangle">
+                    <solid android:color="#18000080" />
+                    <corners android:radius="12dp" />
+                </shape>
+            </item>
+            <!-- Corps -->
+            <item android:bottom="2dp">
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/color_cell_bg" />
+                    <stroke
+                        android:width="1.5dp"
+                        android:color="@color/color_cell_border" />
+                    <corners android:radius="12dp" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+</selector>

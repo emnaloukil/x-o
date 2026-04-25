@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Bouton micro : cercle indigo avec effet pressé rouge -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Actif / pressé (écoute en cours) -->
+    <item android:state_pressed="true">
+        <layer-list>
+            <item>
+                <shape android:shape="oval">
+                    <solid android:color="@color/color_mic_bg_active" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+    <!-- État activé (écoute) -->
+    <item android:state_activated="true">
+        <layer-list>
+            <!-- Halo rouge pulsant simulé par un anneau -->
+            <item>
+                <shape android:shape="oval">
+                    <solid android:color="#40FF5252" />
+                </shape>
+            </item>
+            <item android:top="6dp" android:bottom="6dp" android:left="6dp" android:right="6dp">
+                <shape android:shape="oval">
+                    <solid android:color="@color/color_mic_bg_active" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+    <!-- Normal -->
+    <item>
+        <layer-list>
+            <!-- Ombre -->
+            <item android:top="4dp">
+                <shape android:shape="oval">
+                    <solid android:color="#300031CA" />
+                </shape>
+            </item>
+            <!-- Corps -->
+            <item android:bottom="4dp">
+                <shape android:shape="oval">
+                    <solid android:color="@color/color_mic_bg" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+</selector>

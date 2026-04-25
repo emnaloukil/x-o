@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    dialog_saved_score.xml
+    Emplacement : app/src/main/res/layout/dialog_saved_score.xml
+
+    Utilisation en Java :
+        Dialog dialog = new Dialog(this);
+        dialog.setContentView(R.layout.dialog_saved_score);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT,
+                                     ViewGroup.LayoutParams.WRAP_CONTENT);
+        dialog.show();
+-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/panel_background"
+    android:padding="24dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp">
+
+    <!-- ── TITRE ── -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:id="@+id/tv_saved_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📋"
+            android:textSize="24sp"
+            android:layout_marginEnd="10dp" />
+
+        <TextView
+            android:id="@+id/tv_saved_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/saved_title"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/color_text_primary" />
+    </LinearLayout>
+
+    <!-- ── SÉPARATEUR ── -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/divider_horizontal"
+        android:layout_marginBottom="16dp" />
+
+    <!-- ── MESSAGE VIDE (affiché si aucun tournoi sauvegardé) ── -->
+    <TextView
+        android:id="@+id/tv_saved_no_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/saved_no_data"
+        android:textSize="14sp"
+        android:textColor="@color/color_text_hint"
+        android:gravity="center"
+        android:padding="16dp"
+        android:visibility="gone" />
+
+    <!-- ── CONTENU (affiché si données disponibles) ── -->
+    <LinearLayout
+        android:id="@+id/layout_saved_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Scores -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="14dp">
+
+            <!-- X -->
+            <LinearLayout
+                android:id="@+id/card_saved_x"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/score_card_background"
+                android:padding="12dp"
+                android:layout_marginEnd="5dp">
+
+                <TextView
+                    android:id="@+id/tv_saved_score_x"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/color_player_x"
+                    android:gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Score X"
+                    android:textSize="11sp"
+                    android:textAllCaps="true"
+                    android:letterSpacing="0.08"
+                    android:textColor="@color/color_player_x"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <!-- Nuls -->
+            <LinearLayout
+                android:id="@+id/card_saved_draw"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.9"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/score_card_background"
+                android:padding="12dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp">
+
+                <TextView
+                    android:id="@+id/tv_saved_score_draw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/color_draw"
+                    android:gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nuls"
+                    android:textSize="11sp"
+                    android:textAllCaps="true"
+                    android:letterSpacing="0.08"
+                    android:textColor="@color/color_draw"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <!-- O -->
+            <LinearLayout
+                android:id="@+id/card_saved_o"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/score_card_background"
+                android:padding="12dp"
+                android:layout_marginStart="5dp">
+
+                <TextView
+                    android:id="@+id/tv_saved_score_o"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/color_player_o"
+                    android:gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Score O"
+                    android:textSize="11sp"
+                    android:textAllCaps="true"
+                    android:letterSpacing="0.08"
+                    android:textColor="@color/color_player_o"
+                    android:gravity="center" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Séparateur -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/divider_horizontal"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Total parties -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/saved_total_rounds"
+                android:textSize="14sp"
+                android:textColor="@color/color_text_secondary" />
+
+            <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_saved_total_rounds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="—"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/color_text_primary" />
+        </LinearLayout>
+
+        <!-- Vainqueur -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/saved_winner"
+                android:textSize="14sp"
+                android:textColor="@color/color_text_secondary" />
+
+            <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_saved_winner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="—"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/color_primary" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- ── BOUTON FERMER ── -->
+    <Button
+        android:id="@+id/btn_saved_close"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="@string/saved_btn_close"
+        android:textSize="15sp"
+        android:textColor="@color/color_primary"
+        android:background="@drawable/button_secondary"
+        android:stateListAnimator="@null" />
+
+</LinearLayout>

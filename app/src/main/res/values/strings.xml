@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Général -->
+    <string name="app_name">X-O Tournament</string>
+
+    <!-- Accueil -->
+    <string name="home_title">Tournois X-O </string>
+    <string name="home_btn_play">Jouer</string>
+    <string name="home_btn_rules">Principe du jeu</string>
+    <string name="home_choose_symbol">Choisissez votre symbole :</string>
+    <string name="home_symbol_x">Joueur X</string>
+    <string name="home_symbol_o">Joueur O</string>
+    <string name="home_choose_rounds">Nombre de parties :</string>
+    <string name="home_btn_last_score">Dernier tournoi sauvegardé</string>
+    <string name="home_voice_info">🎤 Mode vocal disponible </string>
+    <string name="home_mode_label">Mode de jeu :</string>
+    <string name="home_mode_local">👥 Local (2 joueurs)</string>
+    <string name="home_mode_online">📡 En ligne (multijoueur)</string>
+
+
+    <!-- Parties spinner -->
+    <string-array name="rounds_options">
+        <item>5 parties</item>
+        <item>10 parties</item>
+        <item>15 parties</item>
+    </string-array>
+
+    <!-- Jeu -->
+    <string name="game_round_label">Partie %1$d / %2$d</string>
+    <string name="game_score_x">X</string>
+    <string name="game_score_o">O</string>
+    <string name="game_score_draw">Nuls</string>
+    <string name="game_turn_label">Tour :</string>
+    <string name="game_player_x">Joueur X</string>
+    <string name="game_player_o">Joueur O</string>
+    <string name="game_btn_mic">🎤 Jouer par voix</string>
+    <string name="game_voice_hint">Dites par exemple : « case cinq »</string>
+    <string name="game_btn_quit">Quitter</string>
+    <string name="game_listening">🔴 Écoute en cours…</string>
+    <string name="game_cell_empty">·</string>
+
+    <!-- Règles -->
+    <string name="rules_title">Principe du jeu</string>
+    <string name="rules_xo_title">🎮 Règles du X-O</string>
+    <string name="rules_xo_text">Le jeu se joue sur une grille 3×3. Chaque joueur place son symbole (X ou O) à tour de rôle. Le premier joueur à aligner 3 symboles (horizontalement, verticalement ou en diagonale) remporte la partie. Si toutes les cases sont remplies sans vainqueur, la partie est déclarée nulle.</string>
+    <string name="rules_tournament_title">🏆 Tournoi</string>
+    <string name="rules_tournament_text">Un tournoi se compose de 5, 10 ou 15 parties. Les scores sont accumulés tout au long du tournoi. À la fin, le joueur avec le plus grand nombre de victoires est déclaré champion.</string>
+    <string name="rules_voice_title">🎤 Commande vocale</string>
+    <string name="rules_voice_text">Appuyez sur le bouton micro et dites le numéro de la case souhaitée : « case un », « case deux », …, « case neuf ». Les cases sont numérotées de gauche à droite et de haut en bas.</string>
+    <string name="rules_grid_diagram">1 | 2 | 3\n—+—+—\n4 | 5 | 6\n—+—+—\n7 | 8 | 9</string>
+    <string name="rules_btn_back">← Retour</string>
+
+    <!-- Résultat -->
+    <string name="result_title">Résultat du tournoi</string>
+    <string name="result_winner_label">🏆 Vainqueur</string>
+    <string name="result_draw">Match nul !</string>
+    <string name="result_winner_x">Joueur X remporte le tournoi !</string>
+    <string name="result_winner_o">Joueur O remporte le tournoi !</string>
+    <string name="result_score_x">Score X</string>
+    <string name="result_score_o">Score O</string>
+    <string name="result_score_draw">Parties nulles</string>
+    <string name="result_btn_save">💾 Sauvegarder</string>
+    <string name="result_btn_home">🏠 Accueil</string>
+
+    <!-- Score sauvegardé -->
+    <string name="saved_title">Dernier tournoi</string>
+    <string name="saved_total_rounds">Nombre de parties :</string>
+    <string name="saved_winner">Vainqueur :</string>
+    <string name="saved_btn_close">Fermer</string>
+    <string name="saved_no_data">Aucun tournoi sauvegardé.</string>
+</resources>
