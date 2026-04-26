@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-    activity_home.xml
-    Emplacement : app/src/main/res/layout/activity_home.xml
-    Écran d'accueil du jeu X-O Tournament
--->
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_main"
@@ -22,9 +16,7 @@
         android:paddingTop="48dp"
         android:paddingBottom="32dp">
 
-        <!-- ══════════════════════════════════════════ -->
-        <!-- EN-TÊTE : titre + sous-titre              -->
-        <!-- ══════════════════════════════════════════ -->
+        <!-- EN-TÊTE -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -32,7 +24,6 @@
             android:gravity="center"
             android:layout_marginBottom="28dp">
 
-            <!-- Icône décorative -->
             <TextView
                 android:id="@+id/tv_home_icon"
                 android:layout_width="wrap_content"
@@ -42,7 +33,6 @@
                 android:gravity="center"
                 android:layout_marginBottom="8dp" />
 
-            <!-- Titre principal -->
             <TextView
                 android:id="@+id/tv_home_title"
                 android:layout_width="wrap_content"
@@ -54,13 +44,9 @@
                 android:gravity="center"
                 android:letterSpacing="0.02" />
 
-
-
         </LinearLayout>
 
-        <!-- ══════════════════════════════════════════ -->
-        <!-- PANNEAU CONFIGURATION                     -->
-        <!-- ══════════════════════════════════════════ -->
+        <!-- PANNEAU CONFIGURATION -->
         <LinearLayout
             android:id="@+id/panel_config"
             android:layout_width="match_parent"
@@ -88,58 +74,41 @@
                 android:orientation="horizontal"
                 android:layout_marginBottom="18dp">
 
-                <!-- Bouton X -->
-                <LinearLayout
-                    android:id="@+id/ll_radio_x"
+                <RadioButton
+                    android:id="@+id/rb_symbol_x"
                     android:layout_width="0dp"
                     android:layout_height="52dp"
                     android:layout_weight="1"
-                    android:orientation="horizontal"
+                    android:text="@string/home_symbol_x"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/color_player_x"
+                    android:buttonTint="@color/color_player_x"
+                    android:background="@drawable/cell_background"
                     android:gravity="center"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
                     android:layout_marginEnd="6dp"
-                    android:background="@drawable/cell_background"
-                    android:clickable="true"
-                    android:focusable="true">
+                    android:checked="true" />
 
-                    <RadioButton
-                        android:id="@+id/rb_symbol_x"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/home_symbol_x"
-                        android:textSize="15sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/color_player_x"
-                        android:buttonTint="@color/color_player_x"
-                        android:checked="true" />
-                </LinearLayout>
-
-                <!-- Bouton O -->
-                <LinearLayout
-                    android:id="@+id/ll_radio_o"
+                <RadioButton
+                    android:id="@+id/rb_symbol_o"
                     android:layout_width="0dp"
                     android:layout_height="52dp"
                     android:layout_weight="1"
-                    android:orientation="horizontal"
-                    android:gravity="center"
-                    android:layout_marginStart="6dp"
+                    android:text="@string/home_symbol_o"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/color_player_o"
+                    android:buttonTint="@color/color_player_o"
                     android:background="@drawable/cell_background"
-                    android:clickable="true"
-                    android:focusable="true">
-
-                    <RadioButton
-                        android:id="@+id/rb_symbol_o"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/home_symbol_o"
-                        android:textSize="15sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/color_player_o"
-                        android:buttonTint="@color/color_player_o" />
-                </LinearLayout>
+                    android:gravity="center"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:layout_marginStart="6dp" />
 
             </RadioGroup>
 
-            <!-- Séparateur -->
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
@@ -165,10 +134,8 @@
                 android:paddingStart="14dp"
                 android:paddingEnd="14dp"
                 android:textSize="15sp"
-                android:layout_marginBottom="18dp"
-                android:entries="@array/rounds_options" />
+                android:layout_marginBottom="18dp" />
 
-            <!-- Séparateur -->
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
@@ -217,11 +184,7 @@
 
         </LinearLayout>
 
-        <!-- ══════════════════════════════════════════ -->
-        <!-- BOUTONS PRINCIPAUX                        -->
-        <!-- ══════════════════════════════════════════ -->
-
-        <!-- Bouton Jouer -->
+        <!-- BOUTONS PRINCIPAUX -->
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_play"
             android:layout_width="match_parent"
@@ -261,9 +224,7 @@
             android:gravity="center"
             android:stateListAnimator="@null" />
 
-        <!-- ══════════════════════════════════════════ -->
-        <!-- INFO MODE VOCAL                           -->
-        <!-- ══════════════════════════════════════════ -->
+        <!-- INFO MODE VOCAL -->
         <LinearLayout
             android:id="@+id/panel_voice_info"
             android:layout_width="match_parent"

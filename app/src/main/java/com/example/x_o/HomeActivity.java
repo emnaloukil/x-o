@@ -1,6 +1,5 @@
 package com.example.x_o;
 
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -26,66 +25,73 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        // Lier les vues
-        rgSymbol     = findViewById(R.id.rg_symbol);
+        rgSymbol = findViewById(R.id.rg_symbol);
         spinnerRounds = findViewById(R.id.spinner_rounds);
-        btnPlay      = findViewById(R.id.btn_play);
-        btnRules     = findViewById(R.id.btn_rules);
+        btnPlay = findViewById(R.id.btn_play);
+        btnRules = findViewById(R.id.btn_rules);
         btnLastScore = findViewById(R.id.btn_last_score);
 
-        // Configurer le Spinner (5, 10, 15 parties)
+        // Forcer X sélectionné au démarrage
+        rgSymbol.check(R.id.rb_symbol_x);
+
+        // Configurer le Spinner : 5, 10, 15 parties
         ArrayAdapter<Integer> adapter = new ArrayAdapter<>(
                 this,
                 android.R.layout.simple_spinner_item,
                 new Integer[]{5, 10, 15}
         );
+
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerRounds.setAdapter(adapter);
 
-        // Bouton Jouer
         btnPlay.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 lancerJeu();
             }
         });
 
-        // Bouton Règles
         btnRules.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 Intent intent = new Intent(HomeActivity.this, RulesActivity.class);
                 startActivity(intent);
             }
         });
 
-        // Bouton Retrouver les scores
         btnLastScore.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 afficherDernierScore();
             }
         });
     }
 
     private void lancerJeu() {
-        // Lire le symbole choisi
         int selectedRadioId = rgSymbol.getCheckedRadioButtonId();
+
         String selectedSymbol;
 
-        if (selectedRadioId == R.id.rb_symbol_x) {
-            selectedSymbol = "X";
-        } else if (selectedRadioId == R.id.rb_symbol_o) {
+        if (selectedRadioId == R.id.rb_symbol_o) {
             selectedSymbol = "O";
         } else {
-            // Aucune sélection : par défaut X
             selectedSymbol = "X";
         }
 
-        // Lire le nombre de parties depuis le Spinner
-        int totalGames = (int) spinnerRounds.getSelectedItem();
+        int totalGames = 5;
 
-        // Lancer GameActivity
+        Object selectedItem = spinnerRounds.getSelectedItem();
+
+        if (selectedItem instanceof Integer) {
+            totalGames = (Integer) selectedItem;
+        } else if (selectedItem != null) {
+            try {
+                totalGames = Integer.parseInt(selectedItem.toString());
+            } catch (NumberFormatException e) {
+                totalGames = 5;
+            }
+        }
+
         Intent intent = new Intent(HomeActivity.this, GameActivity.class);
         intent.putExtra("selectedSymbol", selectedSymbol);
         intent.putExtra("totalGames", totalGames);
@@ -100,7 +106,6 @@ public class HomeActivity extends AppCompatActivity {
             return;
         }
 
-        // Construire le message
         String message =
                 "Score X : " + result.getScoreX() + "\n" +
                         "Score O : " + result.getScoreO() + "\n" +

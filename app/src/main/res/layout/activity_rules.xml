@@ -21,16 +21,6 @@
         android:paddingStart="16dp" android:paddingEnd="16dp"
         android:paddingTop="16dp" android:paddingBottom="12dp">
 
-        <Button
-            android:id="@+id/btn_rules_back"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:text="@string/rules_btn_back"
-            android:textSize="13sp"
-            android:textColor="@color/color_primary"
-            android:background="@drawable/button_secondary"
-            android:paddingStart="14dp" android:paddingEnd="14dp"
-            android:stateListAnimator="@null" />
 
         <TextView
             android:layout_width="0dp"
@@ -175,14 +165,17 @@
                     android:background="@drawable/cell_background"
                     android:lineSpacingMultiplier="1.6" />
 
-                <Button
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_result_home"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:text="@string/result_btn_home"
                     android:textSize="15sp"
+                    android:textStyle="bold"
                     android:textColor="@color/color_primary"
                     android:background="@drawable/button_secondary"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
                     android:stateListAnimator="@null" />
 
             </LinearLayout>

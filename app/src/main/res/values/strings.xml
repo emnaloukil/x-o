@@ -34,7 +34,6 @@
     <string name="game_player_x">Joueur X</string>
     <string name="game_player_o">Joueur O</string>
     <string name="game_btn_mic">🎤 Jouer par voix</string>
-    <string name="game_voice_hint">Dites par exemple : « case cinq »</string>
     <string name="game_btn_quit">Quitter</string>
     <string name="game_listening">🔴 Écoute en cours…</string>
     <string name="game_cell_empty">·</string>
